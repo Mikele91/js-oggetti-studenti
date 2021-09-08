@@ -56,10 +56,22 @@ while(isNaN(eta)){
 var nuovoIscritto = {
     "nome": nome,
     "cognome": cognome,
-    "eta": eta
+    // "eta": eta
 }
+nuovoIscritto["eta"] = eta; //nuovoIscritto.eta =eta;
 listaStudenti.push(nuovoIscritto);
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+
+
+// rimuovere Elemento object 
+
+// listaStudenti = listaStudenti.slice(1); // rimuove il primo elemento dell array non parte da 0; 
+listaStudenti = listaStudenti.splice(1); //altro metodo per rimuovere 
+
+
+
+
+
 for( var i = 0; i<listaStudenti.length; i++){
     console.log(listaStudenti[i]["nome"],listaStudenti[i]["cognome"],listaStudenti[i]["eta"]);
 }
